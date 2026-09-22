@@ -122,7 +122,7 @@ impl RaylibHandle {
             {
                 glfwJoystickIsGamepad(gamepad) != 0
             }
-            #[cfg(all(feature = "sdl", target_arch = "wasm32"))]
+            #[cfg(any(feature = "sdl", target_arch = "wasm32"))]
             {
                 true
             }
